@@ -8,12 +8,12 @@ let productosController = {
     crear: function(req,res){
         db.Categoria.findAll()
         .then(function(categoria){
-            return res.render("formularioDeCarga",{categoria:categoria});
+            return res.render("formularioDeCarga", {categoria:categoria});
 
         }) 
     },
     guardado: function(req,res){
-        db.Producto.create({
+        db.Product.create({
             nombre: req.body.nombre,
             materiales: req.body.materiales,
             precio: req.body.precio,        
@@ -22,7 +22,7 @@ let productosController = {
             stock: req.body.stock,
             descripcion: req.body.descripcion,
             id_categoria: req.body.categoria,
-            //imagen: req.files[0].filename
+            imagen: req.files[0].filename
 
         }),
         res.redirect("/productos/crear");
