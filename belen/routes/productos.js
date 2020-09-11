@@ -18,8 +18,18 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage })
 
-
+//formulariodecarga-Crear
 router.get("/crear", productosController.crear);
 router.post("/crear", upload.any(), productosController.guardado);
+
+//listado
+router.get("/listado", productosController.listado);
+
+// Edición
+router.get("/editar/:id", productosController.editar);
+router.post("/editar/:id",upload.any(), productosController.actualizar);
+
+//eliminar
+router.post("/borrar/:id", productosController.borrar);
 
 module.exports = router;

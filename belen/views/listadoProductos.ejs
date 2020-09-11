@@ -1,0 +1,50 @@
+<%- include("partials/head.ejs")%>
+
+<body>	
+    <%-include('partials/header.ejs') %>
+    <h1> Listado de Productos</h1>
+    
+       <table class="table">
+           <thead class="thead-dark">
+             <tr>
+               
+               <th scope="col">PRODUCTO</th>
+               <th scope="col">MATERIAL</th>
+               <th scope="col">MEDIDAS</th>
+               <th scope="col">PRECIO</th>
+               <th scope="col">CATEGORIA</th>
+               <th scope="col">DESCRIPCION</th>
+               <th scope="col">COLOR</th>
+               <th scope="col">STOCK</th>
+               <th scope="col">EDITAR</th>
+               <th scope="col">ELIMINAR</th>
+             </tr>
+           </thead>
+           <tbody> 
+               <% for (let i = 0; i < productos.length; i++) { %> 
+                   <tr>
+                     <th scope="row"><a href="/productos/<%=productos[i].id%>"><%=productos[i].nombre%></a></td>
+                      
+                       <td><%=productos[i].materiales%></td>
+                       <td><%=productos[i].medidas%>cm</td>
+                       <td>$<%=productos[i].precio%></td>
+                       <td><%=productos[i].id_categoria%></td>
+                       <td><%=productos[i].descripcion%></td>
+                       <td><%=productos[i].color%></td>
+                       <td><%=productos[i].stock%></td>
+                       <td><a href="/productos/editar/<%=productos[i].id%>"><button type="button" class="btn btn-info">E</button></a></td>
+                       <td><form action="/productos/borrar/<%=productos[i].id%>" method="POST"><button type="submit" class="btn btn-danger">X</button></form></td>
+                   </tr>
+               <% } %> 
+           </tbody>
+         </table>
+    
+
+
+
+    <%-include("partials/footer.ejs")%>
+   
+</body>
+
+
+</html>

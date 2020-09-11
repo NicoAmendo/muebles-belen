@@ -1,0 +1,56 @@
+<%- include("partials/head.ejs")%>
+
+<body>
+    <h1>Crear producto</h1>
+    <form action="/productos/editar/<%=producto.id%>"" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="">nombre</label>
+            <input type="text" name="nombre" value="<%=producto.nombre%>">
+        </div>
+        <div>
+            <label for="">materiales</label>
+            <input type="text" name="materiales"value="<%=producto.materiales%>">
+        </div>
+        <div>
+            <label for="">color</label>
+            <input type="text" name="color"value="<%=producto.color%>">
+        </div>
+        <div>
+            <label for="">stock</label>
+            <input type="value" name="stock" value="<%=producto.stock%>">
+        </div>
+        <div>
+            <label for="">descripcion</label>
+            <input type="text" name="descripcion" value="<%=producto.descripcion%>">
+        </div>
+        <div>
+            <label for="">nedidas</label>
+            <input type="value" name="medidas" value="<%=producto.medidas%>">
+        </div>
+        <div>
+            <label for="">precio</label>
+            <input type="value" name="precio" value="<%=producto.precio%>">
+        </div>
+       <div>
+            <label for="">Cargar imagen Producto</label>
+            <input type="file" name="imagen" value="<%=producto.imagen%>">
+          </div>
+          
+        <div>
+            <label for="">seccion</label>
+            <label for="">Categoria</label>
+                <select name="categoria">
+                    <% for (let i = 0; i < categoria.length; i++){%>
+                        <option value="<%=categoria[i].id_categoria%>">
+                           <%=categoria[i].nombre%>
+                        </option>
+                    <% } %>                   
+                                  
+                </select>
+        </div> 
+        <div>
+            <button class= "boton" type ="submit" id="guardar">Guardar</button>
+            </div>
+    </form>
+  </body>
+</html>
