@@ -22,9 +22,12 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER
 
         },   
+        medidas: {
+            type: dataTypes.INTEGER
+        },
 
         precio:{
-            type: dataTypes.FLOAT
+            type: dataTypes.DECIMAL
         
         }, 
         descripcion:{
