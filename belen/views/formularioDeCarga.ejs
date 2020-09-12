@@ -1,59 +1,82 @@
 <%- include("partials/head.ejs")%>
 
 <body>
+    <a href= "/productos/listado">Ir al Listado General</a>
     <div class="container" id="bodyform">
-    <h1>Crear producto</h1>
-    <form action="/productos/crear" method="POST" enctype="multipart/form-data">
-        <div>
-            <label for="">nombre</label>
-            <input type="text" name="nombre">
-        </div>
-        <div>
-            <label for="">materiales</label>
-            <input type="text" name="materiales">
-        </div>
-        <div>
-            <label for="">color</label>
-            <input type="text" name="color">
-        </div>
-        <div>
-            <label for="">stock</label>
-            <input type="value" name="stock">
-        </div>
-        <div>
-            <label for="">descripcion</label>
-            <input type="text" name="descripcion">
-        </div>
-        <div>
-            <label for="">nedidas</label>
-            <input type="value" name="medidas">
-        </div>
-        <div>
-            <label for="">precio</label>
-            <input type="value" name="precio">
-        </div>
-       <div>
-            <label for="">Cargar imagen Producto</label>
-            <input type="file" name="imagen">
-          </div>
-          
-        <div>
-            <label for="">seccion</label>
-            <label for="">Categoria</label>
-                <select name="categoria">
-                    <% for (let i = 0; i < categoria.length; i++){%>
-                        <option value="<%=categoria[i].id_categoria%>">
-                           <%=categoria[i].nombre%>
-                        </option>
-                    <% } %>                   
-                                  
-                </select>
-        </div> 
-        <div>
-            <button class= "boton" type ="submit" id="guardar">Guardar</button>
+        <h1 class="titulodeform">Crear producto</h1>
+         <form action="/productos/crear" method="POST" enctype="multipart/form-data">
+            <div class= "row" id="nombreDelFormulario">
+                <div class="col-12">
+                <label for="">NOMBRE</label>
+                <input type="text" name="nombre" id="campos">
+                </div>
+            </div>
+            <div class= "row">
+                <div class= "col-12" id="materialesDelFormulario">
+                <label for="">MATERIALES</label>
+                <input type="text" name="materiales" id="campoDelmaterial">
+                </div>
+            </div>
+            <div class= "row">
+                <div class="col-12" id= "categoriaDelformulario">
+                   <label for="">CATEGORIA</label>
+                    <select name="categoria" id="inputCategoria">
+                        <% for (let i = 0; i < categoria.length; i++){%>
+                            <option value="<%=categoria[i].id_categoria%>">
+                            <%=categoria[i].nombre%>
+                            </option>
+                        <% } %>                   
+                                    
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class= "col-6" id="colorDelformulario">
+                    <label for="">COLOR</label>
+                    <input type="text" name="color" id="campoDelColor">
+                </div>
+                <div class= "col-3" id="stockDelformulario">
+                    <label for="">STOCK</label>
+                    <select type="value" name="stock" id="campoDelstock">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="1">4</option>
+                        <option value="2">5</option>
+                        <option value="3">6</option>
+                    </select>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-6"id="labeldemedidas">
+                        <label for="" >MEDIDAS</label>
+                        <input type="value" name="medidas" id= "campoDeLasMedidas">
+                    </div>
+                    <div class="col-3">
+                        <label for="">PRECIO</label>
+                        <input type="value" name="precio" id="campoDelPrecio">
+                    </div> 
+            </div>                 
+            <div class="row">
+                <div class=col-4 id="descripciondelformulario">
+                    <label for="" id="descripcionlabel">DESCRIPCION</label>
+                </div>
+            </div>
+            <div class="row"> 
+                <div class="col-12">   
+                <textarea name="descripcion" id="campoDelTexto"></textarea>
+                 </div>
+            </div>
+           <div class="cargaImagen">
+                <label for="">CARGAR IMAGEN</label>
+                <input type="file" name="imagen" id="inputdelaimagen">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-dark" id="guardarformulario">Guardar</button>
+                
             </div>
             
-    </form>
-</div>
-  </body>
+         </form>
+    </div>
+</body>
 </html>

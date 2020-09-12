@@ -1,1 +1,114 @@
 /*CREAR PRODUCTO*/
+#bodyform{
+    width:675;
+    background-color:#60799b;
+    border: solid 3px rgb(204, 219, 204);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.titulodeform{
+    font-size: 18px;
+    font-style: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+} 
+#nombreDelFormulario{
+    margin-left: 88;
+    margin-bottom: 10;
+    
+} 
+
+#campos{
+    margin-left: 44;
+    border: solid rgb(204, 219, 204) 3px;
+} 
+#materialesDelFormulario{
+    margin-left: 104;
+    margin-bottom: 10;
+    
+} 
+
+#campoDelmaterial{
+    margin-left: 18;
+    border: solid rgb(204, 219, 204) 3px;
+}
+
+#categoriaDelFormulario{
+    margin-left: 104;
+    margin-bottom: 40;
+} 
+
+#inputCategoria{
+ width: 208px;
+ margin-left: 26px;
+ border: solid rgb(204, 219, 204) 3px;
+} 
+
+#colorDelformulario{
+    margin-left:65px;
+    margin-bottom: 10;
+} 
+#campoDelColor {
+    width:169px;
+    border: solid rgb(204, 219, 204) 3px;
+    margin-left: 23px;
+}
+
+#stockDelformulario{
+    margin-right: 20px;
+} 
+#campoDelstock{
+    width: 76px;
+    border: solid rgb(204, 219, 204) 3px;
+    margin-left: 10px;
+}
+#labeldemedidas{
+    margin-left: 64px;
+    margin-bottom: 40px;
+} 
+#campoDeLasMedidas{
+    width: 168px;
+    border: solid rgb(204, 219, 204) 3px;
+    margin-left: 10px;
+} 
+
+#campoDelPrecio{
+    width: 76px;
+    border: solid rgb(204, 219, 204) 3px;
+    margin-left: 6px;
+
+} 
+
+#descripciondelformulario{
+    margin-left: 111px;
+}
+
+#descripcionlabel{
+    text-align: justify;
+    margin-bottom: -13px;
+} 
+
+#campoDelTexto{
+    width: 205px;
+    height: 105px;
+    border: solid rgb(204, 219, 204) 3px;
+    margin-left: 213px;
+    margin-bottom: 20px;
+} 
+
+.cargaImagen{
+    margin-left: 111px;
+}
+
+#inputdelaimagen{
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 40px;
+} 
+
+#guardarformulario{
+    margin-left: 211px;
+    width: 230px;
+    margin-bottom: 20px;
+}
