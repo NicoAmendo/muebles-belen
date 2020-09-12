@@ -1,6 +1,7 @@
 <%- include("partials/head.ejs")%>
 
 <body>
+    <a href= "/productos/listado">volver al Listado General</a>
     <div class="container" id="bodyform">
         <h1 class="titulodeform">Estás modificando: <%=producto.nombre%></producto.nombre></h1>
     <form action="/productos/editar/<%=producto.id%>"" method="POST" enctype="multipart/form-data">

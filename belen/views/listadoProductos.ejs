@@ -2,7 +2,8 @@
 
 <body>	
     <%-include('partials/header.ejs') %>
-    <h1> Listado de Productos</h1>
+    
+    <h1 class="titulodeform"> Listado general de productos</h1>
     
        <table class="table">
            <thead class="thead-dark">
@@ -38,6 +39,8 @@
                <% } %> 
            </tbody>
          </table>
+         <a href="/productos/crear" class="btn btn-dark btn-sm" role="button" aria-pressed="true" id="linkdecargarproducto" >CARGAR PRODUCTO NUEVO</a>
+        
     
 
 
