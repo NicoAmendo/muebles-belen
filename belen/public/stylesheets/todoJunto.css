@@ -126,28 +126,39 @@
 #bodymenu{
     background-color:rgb(160, 160, 159);
 } 
+#cajadellogo{
+    background-color: black;
+} 
 
 .navbar{
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    flex-direction: row;
+    font-size: small;
+    word-spacing: 5px;
+    margin-top: 10px;
     
+   
     
 }
 .navbar2{
     color: white;
     font-family: 'Times New Roman', Times, serif;
+    
    
 
 } 
 .navbar li {
-    display: inline;
+    display: inline-block;
     
-    justify-content: flex-end;
+   
+   
 }
 
 .inicio{
     color: white;
+    padding-left: 5px;
+    white-space: normal;
+    
     
    
 } 
