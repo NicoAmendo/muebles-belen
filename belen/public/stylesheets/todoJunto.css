@@ -121,3 +121,33 @@
     
 
 } 
+
+/*header*/
+#bodymenu{
+    background-color:rgb(160, 160, 159);
+} 
+
+.navbar{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: row;
+    
+    
+}
+.navbar2{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+   
+
+} 
+.navbar li {
+    display: inline;
+    
+    justify-content: flex-end;
+}
+
+.inicio{
+    color: white;
+    
+   
+} 
